@@ -45,4 +45,12 @@ public class InvoiceServiceTest {
         InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30.0);
         Assertions.assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
     }
+
+    @Test
+    public void givenUserId_ShouldReturnInvoiceSummary() {
+        CabInvoiceGenerator invoiceService = new CabInvoiceGenerator();
+        InvoiceSummary invoiceSummary = invoiceService.getInvoice(1);
+        InvoiceSummary expectedInvoices = new InvoiceSummary(2, 30);
+        Assertions.assertEquals(expectedInvoices.getInvoiceSummary(), invoiceSummary.getInvoiceSummary());
+    }
 }
