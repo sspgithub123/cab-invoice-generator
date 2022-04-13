@@ -1,5 +1,6 @@
 package com.bridgelabz;
 
+
 import java.util.Objects;
 
 public class InvoiceSummary {
